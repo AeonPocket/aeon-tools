@@ -1,0 +1,32 @@
+{
+  "name": "aeon-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "ws -p 8000 -d src/main/webapp",
+    "build": "grunt build",
+    "test-unit": "karma start src/test/karma.conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-mkdir": "^1.0.0",
+    "grunt-vulcanize": "^1.0.0",
+    "jasmine-core": "^2.8.0",
+    "local-web-server": "^2.2.4"
+  },
+  "devDependencies": {
+    "bower": "^1.8.2",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-ng-html2js-preprocessor": "^1.0.0"
+  }
+}

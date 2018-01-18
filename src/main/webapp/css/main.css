@@ -1,0 +1,94 @@
+:root {
+    --placeholder-color: #E2E2E2;
+}
+
+body {
+    background: linear-gradient(160deg, transparent 80vh, #F3F4F5 80vh, white 100vh), linear-gradient(to bottom, #F3F4F5 160px, white 50vh), white;
+}
+
+form {
+    margin: 0;
+}
+
+md-input-container {
+    margin-bottom: 0;
+}
+
+p {
+    margin: 0;
+}
+
+
+/*********** LOGIN PAGE *************/
+.loginBox {
+    min-width: 300px;
+    padding: 10px;
+}
+
+.loginBox > .logo {
+    width: 128px;
+    height: 128px;
+    color: #244356;
+    margin: -104px auto 0 auto;
+    border-radius: 50%;
+    padding: 20px;
+    background-color: rgba(243, 220, 179, 0.1);
+}
+
+.loginBox > button {
+    margin: 0;
+}
+
+.logoIcon {
+    color: #fff;
+    margin: 10px;
+}
+
+/*********** SEARCH PAGE *************/
+.search {
+    background: none;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: var(--placeholder-color);
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: var(--placeholder-color);
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: var(--placeholder-color);
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: var(--placeholder-color);
+}
+
+.searchRow {
+    min-height: 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.planetAvatar {
+    background: url('../images/space.png');
+    background-size: 100%;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.planetSize {
+    background-color: #f2f2f2;
+    border-radius: 50%;
+}
+
+.planetUnknown .material-icons {
+    font-size: 50px;
+    color: #f2f2f2;
+}
+
+.text-center {
+    text-align: center;
+}
