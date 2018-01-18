@@ -1,0 +1,43 @@
+<div class="loginPage">
+
+    <md-card style="padding: 10px; width:900px; max-width: 90%; margin: 10px auto;">
+        <h3>Check Transaction</h3>
+        <md-input-container>
+            <label>Transaction Hash</label>
+            <input ng-model="data.txHash" pattern="[a-z0-9]{64}"/>
+        </md-input-container>
+        <div ng-if="data.txHash" layout="column">
+            <p>
+                Go to <a target="_blank" ng-href="https://chainradar.com/api/v1/aeon/transactions/{{data.txHash}}/full">Chainradar tx page.</a>
+                And copy the entire content and paste it in the box below.
+            </p>
+            <md-input-container>
+                <label>Paste Transaction JSON here.</label>
+                <input ng-model="data.txJson" />
+            </md-input-container>
+
+            <md-input-container ng-if="data.txJson">
+                <label>Wallet Address</label>
+                <input ng-model="data.walletAddress" />
+            </md-input-container>
+
+            <md-input-container ng-if="data.txJson">
+                <label>View Key</label>
+                <input ng-model="data.viewKey" />
+            </md-input-container>
+        </div>
+        <md-card-actions layout="row" layout-align="start center" ng-if="data.txJson">
+            <div flex>
+                <p ng-if="data.receivedAmount">
+                    <strong>AEON Received:</strong> {{data.receivedAmount}} AEON
+                </p>
+            </div>
+            <md-button ng-click="check()">Check</md-button>
+        </md-card-actions>
+    </md-card>
+    <md-card style="padding: 10px; width:900px; max-width: 90%; margin: 10px auto; text-align: center; font-size: 12px; word-break: break-all;">
+        If you find it useful, please consider contributing<br/>
+        AEON: WmtsJ7cC8UGAFNaSzg16bN73EaL5JRa46dYZJG77DVmGJEWyhebj8QQLsotcFMCHvHJM6ba4uKDEAEyrssNhfodY1LdbW17Yo
+    </md-card>
+
+</div>
